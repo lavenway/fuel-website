@@ -1,0 +1,26 @@
+<section class="module image-caption has-double-image">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col">
+
+                <figure class="figure">
+                    <img class="mx-auto d-block img-fluid" src="assets/dist/img/module-image-medium.jpg" alt="Image description">
+                    <figcaption class="figure-caption">Moreover the striking, brilliant and vivid colors are the reason why we are attracted.</figcaption>
+                </figure>
+
+                <figure class="figure">
+
+                    <img class="mx-auto d-block img-fluid" src="assets/dist/img/module-image-small.jpg" alt="Image description">
+
+                </figure>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

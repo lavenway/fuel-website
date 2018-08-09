@@ -1,0 +1,15 @@
+/*************************************************
+ * CAROUSEL - MEDIUM
+ *************************************************/
+
+.carousel {
+    .swiper-container {
+        .swiper-button-prev {
+            left: -50px;
+        }
+
+        .swiper-button-next {
+            right: -50px;
+        }
+    }
+}

@@ -16,11 +16,23 @@
 
 /* ----- COMPONENTS ----- */
 @import "components/buttons";
+@import "components/card";
+@import "components/filter";
+@import "components/quote";
+@import "components/navigation";
+@import "components/table";
 
 
 /* ----- MODULES ----- */
 @import "modules/module";
-
+@import "modules/cards";
+@import "modules/carousel";
+@import "modules/column";
+@import "modules/form";
+@import "modules/hero";
+@import "modules/image-caption";
+@import "modules/tags";
+@import "modules/title";
 
 /* ----- GENERAL ----- */
 @import "general/general";
@@ -35,7 +47,7 @@
 
 
 /* ----- ONLY XTRA SMALL DEVICES / PHONES ----- */
-@media screen and ( max-width: $screen-width-sm - 1px ) {
+@media screen and ( max-width: $screen-width-xs - 1px ) {
 
     /* ----- TOOLS ----- */
 
@@ -59,10 +71,6 @@
 
 
     /* ----- GENERAL ----- */
-    @import "general/general.sm";
-
-    /* ----- MODULES ----- */
-    @import "modules/module.sm";
 
     /* ----- COMPONENTS ----- */
     @import "components/buttons.sm";
@@ -97,10 +105,20 @@
     /* ----- GENERAL ----- */
 
 
-    /* ----- MODULES ----- */
+    /* ----- FOOTER ----- */
+    @import "footer/footer.md";
 
+
+    /* ----- MODULES ----- */
+    @import "modules/module.md";
+    @import "modules/cards.md";
+    @import "modules/carousel.md";
+    @import "modules/column.md";
+    @import "modules/title.md";
 
     /* ----- COMPONENTS ----- */
+    @import "components/card.md";
+    @import "components/navigation.md";
 
 }
 
@@ -116,7 +134,6 @@
 
     /* ----- MODULES ----- */
 
-
     /* ----- COMPONENTS ----- */
 
 }
@@ -129,10 +146,32 @@
 
 
     /* ----- GENERAL ----- */
+    @import "general/general.lg";
 
 
     /* ----- MODULES ----- */
+    @import "modules/cards.lg";
+    @import "modules/image-caption.lg";
+    @import "modules/hero.lg";
+    @import "modules/tags.lg";
 
+    /* ----- COMPONENTS ----- */
+    @import "components/card.lg";
+
+}
+
+
+/* ----- XL LARGE DEVICES / DESKTOP + UP ----- */
+@media screen and ( min-width: $screen-width-xl ) {
+
+    /* ----- TOOLS ----- */
+
+
+    /* ----- GENERAL ----- */
+
+
+    /* ----- MODULES ----- */
+    @import "modules/column.xl";
 
     /* ----- COMPONENTS ----- */
 

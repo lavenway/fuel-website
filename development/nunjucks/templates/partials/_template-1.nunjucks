@@ -1,0 +1,47 @@
+{% include '../partials/_hero.nunjucks' %}
+
+<section id="page-article" class="module column background-white">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-3 offset-md-2 order-md-2">
+
+                <div class="image">
+                    <span>Dean Morris</span>
+                    <img class="img-fluid" src="assets/dist/img/placeholder-300x300.png" alt="Image description">
+                </div>
+
+                <aside>
+                    <h6>Tags</h6>
+
+                    <div class="tags">
+                        <a href="#"><span>Strategy</span></a>
+                        <a href="#"><span>Success Stories</span></a>
+                        <a href="#"><span>Case Studies</span></a>
+                        <a href="#"><span>Transformation</span></a>
+                        <a href="#"><span>Events</span></a>
+                    </div>
+
+                    {{ buttonMacro.button(
+                        "/contact",
+                        "_self",
+                        "Share"
+                    ) }}
+
+                </aside>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6 offset-md-1 order-md-1">
+
+                <p class="intro"><i>So you have heard about this site or you have been to it, but you cannot figure out what it is or what it can do. MTA web directory is the simplest way in which one can bid on a link, or a few links if they wish to do so.</i></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

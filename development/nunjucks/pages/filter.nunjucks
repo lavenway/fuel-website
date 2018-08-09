@@ -1,0 +1,73 @@
+{% extends '../templates/_layout.nunjucks' %}
+
+{% import '../templates/macros/_filter.nunjucks' as filterMacro %}
+
+{% block bodyCssClasses %}page-index{% endblock %}
+
+{% block content %}
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h1 class="smaller">Filter Component</h1>
+                    <p>For each filter added in the CMS we need to assign a value to the 'data-filter' attribute on the 'button' tag.</p>
+                    <p>The first filter should use the '*' token as its value as this will reset the filters.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module column">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    {{ filterMacro.filter(
+                        [
+                            {
+                                id: "filterNameOne",
+                                name: "Filter 1",
+                                subCat:
+                                [
+                                    {
+                                        tag: "*",
+                                        text: "All"
+                                    },
+                                    {
+                                        tag: ".value-one",
+                                        text: "Value 1"
+                                    },
+                                    {
+                                        tag: ".value-two",
+                                        text: "Value 2"
+                                    },
+                                    {
+                                        tag: ".value-three",
+                                        text: "Value 3"
+                                    }
+                                ]
+                            }
+                        ]
+                    ) }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

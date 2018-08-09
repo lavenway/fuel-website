@@ -1,0 +1,83 @@
+/*************************************************
+ * COLUMN - EXTRA LARGE
+ *************************************************/
+
+.column {
+    &.background-offset-left {
+        position: relative;
+        background: transparent;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            transform: translate(50%);
+            margin-right: 590px;
+        }
+
+        &.background-primary {
+            &:before {
+                background: $color-secondary;
+            }
+        }
+
+        &.background-secondary {
+            &:before {
+                background: $color-secondary;
+            }
+        }
+
+        &.background-grey-light {
+            &:before {
+                background: $color-grey-light;
+            }
+        }
+    }
+
+    &.container-offset-top, &.container-offset-bottom {
+        position: relative;
+        background: transparent;
+
+        &:before {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 200px);
+        }
+
+        &.background-primary {
+            &:before {
+                background: $color-secondary;
+            }
+        }
+
+        &.background-secondary {
+            &:before {
+                background: $color-secondary;
+            }
+        }
+
+        &.background-grey-light {
+            &:before {
+                background: $color-grey-light;
+            }
+        }
+    }
+
+    &.container-offset-top {
+        &:before {
+            bottom: 0;
+        }
+    }
+
+    &.container-offset-bottom {
+        &:before {
+            top: 0;
+        }
+    }
+}

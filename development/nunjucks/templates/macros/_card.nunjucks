@@ -1,0 +1,85 @@
+{% macro cardSingle( tag, color, author, image, title, description, btn, url, target, posted ) %}
+    <div class="card {{ color }} {{ tag }}">
+
+        {% if author.length %}
+            <span class="author">{{ author }}</span>
+        {% endif %}
+
+        {% if image.length %}
+            <div class="image">
+                <img class="card-img-top" src="{{ image }}" alt="Image description">
+            </div>
+        {% endif %}
+
+        <div class="card-body">
+            <h4>{{ title }}</h4>
+
+            {% if description.length %}
+                <p class="description"><i>{{ description }}</i></p>
+            {% endif %}
+
+        </div>
+
+        <div class="card-footer">
+            <a href="{{ url }}" target="{{ target }}" class="btn btn-primary">{{ btn }}</a>
+
+            {% if posted.length %}
+                <div class="float-right">
+                    <p class="posted"><i>{{ posted }}</i></p>
+                </div>
+            {% endif %}
+        </div>
+
+    </div>
+{% endmacro %}
+
+{% macro cardDouble( cards ) %}
+
+        <div class="card">
+
+            {% for nestedCard in cards %}
+
+                <div class="nested-card {{ nestedCard.color }} {{ nestedCard.tag }}">
+
+                    {% if nestedCard.author.length %}
+                        <span class="author">{{ nestedCard.author }}</span>
+                    {% endif %}
+
+                    <div class="card-body">
+                        <h4>{{ nestedCard.title }}</h4>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="{{ nestedCard.url }}" target="{{ nestedCard.target }}" class="btn btn-primary">{{ nestedCard.btn }}</a>
+
+                        {% if nestedCard.posted.length %}
+                            <div class="float-right">
+                                <p class="posted"><i>{{ nestedCard.posted }}</i></p>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+{% endmacro %}
+
+{% macro cardProfile( image, title, description ) %}
+    <div class="card profile">
+
+        <div class="image">
+            <img class="card-img-top" src="{{ image }}" alt="Image description">
+        </div>
+
+        <div class="card-body">
+            <h4>{{ title }}</h4>
+
+            <p class="description"><i>{{ description }}</i></p>
+
+        </div>
+
+    </div>
+{% endmacro %}

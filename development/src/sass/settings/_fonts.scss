@@ -2,14 +2,24 @@
 * TYPOGRAPHY
 ****************************************/
 
-/* MAJESTIC BANNER */
-/*@font-face {
-  font-family: 'MajesticBanner';
-  src: url('../fonts/MajestiBanner-Medium.eot');
-  src: url('../fonts/MajestiBanner-Medium.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/MajestiBanner-Medium.woff') format('woff'),
-       url('../fonts/MajestiBanner-Medium.ttf')  format('truetype'),
-       url('../fonts/MajestiBanner-Medium.svg#MajesticBanner') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}*/
+/* CIRCULAR STANDARD */
+@font-face {
+    font-family: 'CircularStdBook';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Circular Std Book'), url('../fonts/CircularStd-Book.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'CircularStdBlack';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Circular Std Black'), url('../fonts/CircularStd-Black.woff') format('woff');
+}
+
+/* GEORGIA ITALIC */
+%font-italic {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-style: italic;
+}

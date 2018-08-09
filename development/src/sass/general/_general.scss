@@ -7,9 +7,11 @@ html {
 }
 
 body {
-    @include font-regular();
+    font-family: $font-regular;
     font-size: $font-size-3;
     color: $color-black;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
     background-color: $color-white;
 }
 
@@ -17,57 +19,122 @@ body {
     box-sizing: inherit;
 }
 
+::selection {
+    color: $color-white;
+    background: $color-primary;
+}
+
 a:link, a:visited {
-    color: $color-blue;
+    color: $color-primary;
     text-decoration: underline;
-    transition: $transition;
+    @include transition( 0.3s all ease-in-out );
 }
 
 a:hover, a:active, a:focus {
-    color: $color-red;
+    color: $color-secondary;
 }
 
- h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-bold;
+}
+
+ h1, h2 {
+     margin-bottom: $gutter + 10;
+}
+
+h3 {
  	margin-bottom: $gutter;
-    @include font-bold;
 }
 
 h4, h5, h6 {
     margin-bottom: $gutter / 2;
-    @include font-regular;
 }
 
 h1 {
-    font-size: $font-size-8;
+    font-size: $font-size-10;
+    line-height: 58px;
+    letter-spacing: -1px;
+
+    &.smaller {
+        font-size: $font-size-8;
+        line-height: 53px;
+    }
 }
 
 h2 {
-    font-size: $font-size-6;
+    font-size: $font-size-8;
+    line-height: 53px;
+    letter-spacing: -1px;
 }
 
 h3 {
-    font-size: $font-size-5;
+    font-size: $font-size-6;
+    line-height: 38px;
+    letter-spacing: -0.5px;
 }
 
 h4 {
-    font-size: $font-size-4;
+    font-size: $font-size-5;
+    line-height: 34px;
+    letter-spacing: -0.13px;
 }
 
 h5 {
-    font-size: $font-size-3;
+    font-size: $font-size-4;
+    line-height: 20px;
 }
 
 h6 {
-    font-size: $font-size-2;
+    font-size: $font-size-3;
+    line-height: 20px;
 }
 
 p {
     margin-bottom: $gutter;
-    @include font-regular;
     font-size: $font-size-3;
+    line-height: 24px;
 }
 
-ul {
+strong, b {
+    font-family: $font-bold;
+}
+
+em, i {
+    @extend %font-italic;
+}
+
+ol, ul {
     margin-bottom: $gutter;
     padding-left: $gutter;
+    list-style-type: disc;
+
+    li {
+        line-height: 24px;
+    }
+}
+
+#global {
+    overflow: hidden;
+}
+
+/* BOOSTRAP GRID OVERRIDES */
+.container, .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.row {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+[class^="col"] {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
 }

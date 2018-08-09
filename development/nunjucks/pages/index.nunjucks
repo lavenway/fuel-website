@@ -1,6 +1,6 @@
 {% extends '../templates/_layout.nunjucks' %}
 
-{% block bodyCssClasses %}page-home{% endblock %}
+{% block bodyCssClasses %}page-index{% endblock %}
 
 {% block content %}
 
@@ -10,9 +10,62 @@
 
             <div class="row">
 
-                <div class="col-xs-12">
+                <div class="col">
 
-                    <h1>H1 Header title</h1>
+                    <h1 class="smaller">Fuel Website Styleguide</h1>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Templates</h4>
+
+                    <ul>
+                        <li><p><a href="template-1.html">Template 1 - Article</a></p></li>
+                        <li><p><a href="template-2.html">Template 2 - Work</a></p></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Modules</h4>
+
+                    <ul>
+                        <li><p><a href="cards.html">Cards</a></p></li>
+                        <li><p><a href="carousel.html">Carousel</a></p></li>
+                        <li><p><a href="column.html">Column</a></p></li>
+                        <li><p><a href="form.html">Form</a></p></li>
+                        <li><p><a href="hero.html">Hero</a></p></li>
+                        <li><p><a href="image-caption.html">Image with Caption</a></p></li>
+                        <li><p><a href="tags.html">Tags</a></p></li>
+                        <li><p><a href="title.html">Title</a></p></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Components</h4>
+
+                    <ul>
+                        <li><p><a href="card.html">Card</a></p></li>
+                        <li><p><a href="filter.html">Filter</a></p></li>
+                        <li><p><a href="quote.html">Quote</a></p></li>
+                        <li><p><a href="table.html">Table</a></p></li>
+                    </ul>
 
                 </div>
 
@@ -21,7 +74,5 @@
         </div>
 
     </section>
-
-    {% include '../templates/partials/_example.nunjucks' %}
 
 {% endblock %}

@@ -1,0 +1,29 @@
+<section class="module hero background-primary">
+
+    <div class="video-container rellax">
+        <iframe src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-lg-8 offset-lg-2">
+
+                <p><i>According to recent working paper by MIT, the average age of a successful company entrepeneur is 42, not 22.</i></p>
+
+                <h1>Are you ready?</h1>
+
+                {{ buttonMacro.button(
+                    "/contact",
+                    "_self",
+                    "Let Fuel support your new venture"
+                ) }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

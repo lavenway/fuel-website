@@ -1,0 +1,162 @@
+/*************************************************
+ * HERO
+ *************************************************/
+
+.hero {
+    position: relative;
+    max-height: 800px;
+    overflow: hidden;
+    padding: $gutter * 2;
+
+    &:before {
+        @include transparentOverlay( $color-primary-opacity );
+    }
+
+    .container {
+        z-index: 2;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .image-container {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200% !important;
+            height: 1600px !important;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        max-width: 80%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-secondary;
+    }
+
+    p {
+        color: $color-white;
+    }
+
+    &.carousel {
+        height: 450px;
+        padding: 0;
+
+        &:before {
+            display: none;
+        }
+
+        .swiper-container {
+            z-index: 1;
+            overflow: hidden;
+            height: 100%;
+            padding: 0;
+
+            .swiper-slide {
+                z-index: -1;
+                position: absolute;
+                padding: 0 $gutter * 2;
+
+                .container {
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    [class^="col"] {
+                        *:nth-child(1) {
+                            top: 5%;
+                        }
+
+                        *:nth-child(2) {
+                            top: 10%;
+                        }
+                    }
+                }
+
+                &:before {
+                    @include transparentOverlay( $color-primary-opacity );
+                }
+
+                .image-container {
+                    opacity: 0;
+                    filter:blur(50px);
+                    @include transition( 1s opacity ease, 0.5s filter ease );
+                }
+
+                h1, h2, h3, h4, h5, h6, p {
+                    position: relative;
+                    opacity: 0;
+                    @include transition( 0.4s opacity ease, 0.6s top ease );
+                    transition-delay: 0.4s;
+                }
+
+                .btn {
+                    opacity: 0;
+                    transition-delay: 0.6s;
+                }
+
+                &.swiper-slide-active, &.swiper-slide-duplicate-active {
+                    z-index: 1;
+
+                    .image-container {
+                        filter:blur(0);
+                    }
+
+                    .image-container, h1, h2, h3, h4, h5, h6, p, .btn {
+                        opacity: 1;
+                    }
+
+                    [class^="col"] {
+                        *:nth-child(1) {
+                            top: 0;
+                        }
+
+                        *:nth-child(2) {
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination {
+            left: auto;
+            right: $gutter;
+            bottom: 50%;
+            width: auto;
+            transform: translateY(50%);
+
+            .swiper-pagination-bullet {
+                display: block;
+                width: 10px;
+                height: 10px;
+                margin: $gutter auto;
+                font-size: 0;
+                color: $color-white;
+                background: $color-white;
+
+                &.swiper-pagination-bullet-active {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+}

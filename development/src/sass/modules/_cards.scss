@@ -1,0 +1,29 @@
+/*************************************************
+ * CARDS
+ *************************************************/
+
+.card-deck {
+    margin-right: -12px;
+    margin-left: -12px;
+
+    .card {
+        min-width: 94%;
+        max-width: 94%;
+        margin-bottom: $gutter * 3;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+.card-group {
+    &.card-profiles {
+        position: relative;
+        margin-right: -12px;
+        margin-left: -12px;
+
+        .card {
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+}

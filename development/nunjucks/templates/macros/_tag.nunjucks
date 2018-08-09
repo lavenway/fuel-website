@@ -1,0 +1,9 @@
+{% macro tag( tagName ) %}
+
+        {% for name in tagName %}
+
+            <p>{{ name.text }}</p>
+
+        {% endfor %}
+
+{% endmacro %}

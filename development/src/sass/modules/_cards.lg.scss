@@ -1,0 +1,27 @@
+/*************************************************
+ * CARDS - LARGE
+ *************************************************/
+
+.card-deck {
+    .card {
+        min-width: calc(33.333% - 24px);
+        max-width: calc(33.333% - 24px);
+
+        &.background-white {
+            margin-left: 24px;
+            margin-right: 24px;
+
+            min-width: calc(33.333% - 48px);
+            max-width: calc(33.333% - 48px);
+        }
+    }
+}
+
+.card-group {
+    &.card-profiles {
+        .card {
+            min-width: calc(33.333% - 67px);
+            max-width: calc(33.333% - 67px);
+        }
+    }
+}

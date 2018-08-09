@@ -1,0 +1,23 @@
+/*************************************************
+ * IMAGE CAPTION
+ *************************************************/
+
+.image-caption {
+    figure {
+        display: block;
+        vertical-align: top;
+        margin-bottom: $gutter;
+
+        img {
+            max-height: 400px;
+        }
+
+        figcaption {
+            width: 100%;
+            padding: $gutter - 6;
+            color: $color-white;
+            line-height: 24px;
+            background: $color-primary;
+        }
+    }
+}

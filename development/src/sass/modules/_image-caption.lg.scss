@@ -1,0 +1,31 @@
+/*************************************************
+ * IMAGE CAPTION - LARGE
+ *************************************************/
+
+.image-caption {
+    figure {
+        display: inline-block;
+        margin-bottom: 0;
+
+        figcaption {
+            max-width: 70%;
+            margin-left: 50px;
+        }
+    }
+
+    &.has-double-image {
+        figure {
+            &:first-child {
+                max-width: 66.666%;
+            }
+
+            &:last-child {
+                max-width: 33.333%;
+
+                img {
+                    padding-left: $gutter;
+                }
+            }
+        }
+    }
+}

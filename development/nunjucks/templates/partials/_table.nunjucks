@@ -1,0 +1,32 @@
+<div class="table-responsive">
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><h4>1. Strategic.</h4></th>
+                <td class="table-grey-light">Focus</td>
+                <td class="table-grey-light">Purpose</td>
+                <td class="table-grey-light">Value</td>
+            </tr>
+            <tr>
+                <th scope="row"><h4>2. Creative.</h4></th>
+                <td class="table-grey-light">Inspire</td>
+                <td class="table-grey-light">Educate</td>
+                <td class="table-grey-light">Engage</td>
+            </tr>
+            <tr>
+                <th scope="row"><h4>3. Communications.</h4></th>
+                <td class="table-grey-light">Define</td>
+                <td class="table-grey-light">Develop</td>
+                <td class="table-grey-light">Execute</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

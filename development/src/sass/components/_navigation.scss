@@ -1,0 +1,47 @@
+/*************************************************
+ * NAVIGATION
+ *************************************************/
+.nav {
+    .nav-item {
+        .nav-link {
+            i {
+
+            }
+        }
+    }
+
+    &#work-nav {
+        margin-top: -$gutter * 2;
+        margin-bottom: $gutter * 2;
+        background: $color-secondary;
+
+        .nav-item {
+            text-align: center;
+
+            .nav-link {
+                padding: $gutter / 2;
+                text-decoration: none;
+
+                i {
+                    color: $color-white;
+
+                    &.menu {
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+
+                        line-height: 12px;
+
+                        span {
+                            display: inline-block;
+                            width: 6px;
+                            height: 6px;
+                            margin: 1px;
+                            background: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

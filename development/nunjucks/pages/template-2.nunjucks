@@ -1,0 +1,28 @@
+{% extends '../templates/_layout.nunjucks' %}
+
+{% block bodyCssClasses %}page-index{% endblock %}
+
+{% block content %}
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h1 class="smaller">Work Template</h1>
+                    <p>Bespoke template</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include '../templates/partials/_template-2.nunjucks' %}
+
+{% endblock %}

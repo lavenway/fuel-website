@@ -1,0 +1,35 @@
+/*************************************************
+ * CAROUSEL
+ *************************************************/
+
+.carousel {
+    .swiper-container {
+        overflow: visible;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        &.multi-slide {
+
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            top: auto;
+            bottom: -60px;
+            width: 50px;
+            height: 44px;
+            margin-top: 0;
+            font-size: $font-size-9;
+            color: $color-secondary;
+            background-image: none;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+    }
+}

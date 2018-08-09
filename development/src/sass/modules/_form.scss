@@ -1,0 +1,27 @@
+/*************************************************
+ * FORM
+ *************************************************/
+
+.form {
+    form {
+        margin-top: $gutter * 2;
+
+        .form-group {
+            margin-bottom: $gutter * 2;
+
+            .col-form-label {
+                padding: $gutter - 6 $gutter;
+                font-family: $font-bold;
+                font-size: $font-size-2;
+            }
+
+            .form-control {
+                padding: $gutter - 6 $gutter;
+                font-size: $font-size-2;
+                border-color: $color-grey;
+                border-radius: 2px;
+                background: $color-grey-opacity;
+            }
+        }
+    }
+}

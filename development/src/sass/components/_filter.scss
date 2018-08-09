@@ -1,0 +1,82 @@
+/*************************************************
+ * FILTER
+ *************************************************/
+
+#filters {
+    .btn-group {
+        &.btn-group-mobile {
+            .btn {
+                @include btn( transparent, $color-secondary, $color-secondary, $color-secondary, $color-white, $color-secondary );
+                margin-top: 0;
+                font-size: $font-size-4;
+            }
+        }
+
+        &.btn-group-desktop {
+            .label, .btn {
+                vertical-align: top;
+                padding: $gutter / 2 $gutter;
+                font-size: $font-size-4;
+                line-height: normal;
+            }
+
+            .label {
+                display: inline-block;
+                font-family: $font-bold;
+                color: $color-primary;
+            }
+
+            .btn {
+                font-family: $font-bold;
+                color: $color-secondary;
+                border: none;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .dropdown-toggle {
+            display: block;
+            width: 100%;
+
+            &:after {
+                display: none;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            i {
+                position: absolute;
+                top: 50%;
+                right: $gutter;
+                transform: translateY(-50%);
+            }
+        }
+
+        .dropdown-menu {
+            position: relative !important;
+            width: 100%;
+            transform: none !important;
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            text-align: center;
+            background: $color-secondary;
+
+            .dropdown-item {
+                padding: $gutter;
+                font-size: $font-size-4;
+                color: $color-white;
+                text-decoration: none;
+
+                &:hover {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}

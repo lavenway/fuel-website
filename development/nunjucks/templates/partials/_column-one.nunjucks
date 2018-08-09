@@ -1,0 +1,23 @@
+<section class="module column background-secondary">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col offset-xl-1">
+
+                <h2>Don't build a Digital Strategy.</h2>
+                <p><i>Digitise your business strategy</i></p>
+                {{ buttonMacro.button(
+                    "#",
+                    "_self",
+                    "See our work"
+                ) }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

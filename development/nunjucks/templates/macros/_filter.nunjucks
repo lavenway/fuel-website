@@ -1,0 +1,40 @@
+{% macro filter( categories, subCat ) %}
+
+    <div id="filters">
+
+        {% for category in categories %}
+
+            <div class="btn-group-mobile btn-group d-block d-sm-block d-md-none d-lg-none d-xl-none">
+
+                <button class="btn dropdown-toggle" type="button" id="{{ category.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ category.name }}
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="{{ category.id }}">
+                    {% for value in category.subCat %}
+                        <a class="dropdown-item" href="#" data-filter="{{ value.tag }}">{{ value.text }}</a>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+            <div class="btn-group-desktop btn-group d-none d-sm-none d-md-block d-lg-block d-xl-block">
+
+                <span class="label">Show me:</span>
+
+                {% for value in category.subCat %}
+
+                    <button class="btn" type="button" data-filter="{{ value.tag }}">
+                        {{ value.text }}
+                    </button>
+
+                {% endfor %}
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endmacro %}

@@ -1,0 +1,37 @@
+/*************************************************
+ * GENERAL - MEDIUM
+ *************************************************/
+h1 {
+    font-size: $font-size-12;
+    line-height: 110px;
+
+    &.smaller {
+        font-size: $font-size-10;
+        line-height: 66px;
+    }
+}
+
+h2 {
+    font-size: $font-size-10;
+    line-height: 74px;
+}
+
+h3 {
+    font-size: $font-size-8;
+    line-height: 53px;
+}
+
+h4 {
+    font-size: $font-size-5;
+    line-height: 34px;
+}
+
+h5 {
+    font-size: $font-size-4;
+    line-height: 24px;
+}
+
+h6 {
+    font-size: $font-size-3;
+    line-height: 24px;
+}

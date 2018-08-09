@@ -38,13 +38,14 @@ var gulp = require('gulp'),
         distJs: ASSETS_DIR+'dist/js/',
         distImg: ASSETS_DIR+'dist/img/',
         distData: ASSETS_DIR+'data/',
+        distFonts: ASSETS_DIR+'dist/fonts/',
         vendorJs: DEVELOPMENT_DIR+'vendor/js/',
         vendorCss: DEVELOPMENT_DIR+'vendor/css/'
 	};
 
     // BROWSERS TO TARGET WHEN PREFIXING CSS.
     var AUTOPREFIXER_OPTIONS = {
-        browsers: ['last 2 versions', 'ie >= 9', 'safari >= 8']
+        browsers: [ "last 1 version", ">1%", "IE 10" ]
     };
 
     // HTML PATHS
@@ -57,11 +58,11 @@ var gulp = require('gulp'),
 
     var UGLIFY_OPTIONS = {
         compress: {
-            drop_console: true
+            drop_console: true,
+            hoist_funs: false
         },
-        mangle: false,
-        preserveComments: false,
-        report: "min"
+        mangle: true,
+        toplevel: true
     };
 
     // PUMP CALLBACK
@@ -157,6 +158,16 @@ var gulp = require('gulp'),
         )
     });
 
+     // COOY FONT FILES
+    gulp.task('fonts', function () {
+        pump([
+            gulp.src(PATHS.fonts+'**/*'),
+            gulp.dest(PATHS.distFonts)
+        ],
+            pumpCb
+        );
+    });
+
     // COOY DATA FILES
     gulp.task('data', function () {
         pump([
@@ -186,7 +197,7 @@ var gulp = require('gulp'),
     // BUILD SEQUENCES
     gulp.task('build', function(callback) {
         runSequence('clean:dist',
-            ['nunjucks', 'custom-js', 'vendor-js', 'sass', 'vendor-css', 'images', 'data'],
+            ['nunjucks', 'custom-js', 'vendor-js', 'sass', 'vendor-css', 'images', 'data', 'fonts'],
             callback
         );
     });
@@ -197,7 +208,8 @@ var gulp = require('gulp'),
             gulp.src(PUBLIC_DIR),
             server({
                 livereload: true,
-                open: true
+                open: true,
+                port: 3000
             })
         ],
             pumpCb
@@ -208,6 +220,7 @@ var gulp = require('gulp'),
     gulp.task('default', ['build', 'server'], function () {
         gulp.watch(PATHS.srcSass+'**/*.scss',['sass']);
         gulp.watch(PATHS.srcJs+'**/*.js',['custom-js']);
+        gulp.watch(PATHS.img+'**/*',['images']);
         gulp.watch(PATHS.data+'**/*.json',['data']);
         gulp.watch([NUNJUCKS_DIR+'pages/**/*.+(html|nunjucks)',NUNJUCKS_DIR+'templates/**/*.+(html|nunjucks)'],['nunjucks']);
     });

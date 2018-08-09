@@ -1,0 +1,96 @@
+{% import '../macros/_card.nunjucks' as cardMacro %}
+
+<section class="module carousel">
+
+    <div class="container">
+
+        <!-- Slider main container -->
+        <div class="swiper-container multi-slide">
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Slides -->
+                <div class="swiper-slide">
+
+                    {{ cardMacro.cardSingle(
+                        null,
+                        "background-white",
+                        null,
+                        "assets/dist/img/placeholder-300x300.png",
+                        "In a changing world it's still about human to human communication",
+                        null,
+                        "See our work",
+                        "/work",
+                        "_self",
+                        null
+                    ) }}
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    {{ cardMacro.cardSingle(
+                        null,
+                        "background-white",
+                        null,
+                        "assets/dist/img/placeholder-300x300.png",
+                        "In a changing world it's still about human to human communication",
+                        null,
+                        "See our work",
+                        "/work",
+                        "_self",
+                        null
+                    ) }}
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    {{ cardMacro.cardSingle(
+                        null,
+                        "background-white",
+                        null,
+                        "assets/dist/img/placeholder-300x300.png",
+                        "In a changing world it's still about human to human communication",
+                        null,
+                        "See our work",
+                        "/work",
+                        "_self",
+                        null
+                    ) }}
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    {{ cardMacro.cardSingle(
+                        null,
+                        "background-white",
+                        null,
+                        "assets/dist/img/placeholder-300x300.png",
+                        "In a changing world it's still about human to human communication",
+                        null,
+                        "See our work",
+                        "/work",
+                        "_self",
+                        null
+                    ) }}
+
+                </div>
+
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+            </div>
+            <div class="swiper-button-next">
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

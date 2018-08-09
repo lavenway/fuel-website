@@ -1,0 +1,247 @@
+{% extends '../templates/_layout.nunjucks' %}
+
+{% import '../templates/macros/_card.nunjucks' as cardMacro %}
+
+{% import '../templates/macros/_filter.nunjucks' as filterMacro %}
+
+{% block bodyCssClasses %}page-index{% endblock %}
+
+{% block content %}
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h1 class="smaller">Cards Module</h1>
+                    <p>Shared CMS options:</p>
+                    <p>To be applied to the parent 'section' tag.</p>
+                    <ul>
+                        <li><strong>Offsets:</strong>'container-offset-top', 'container-offset-bottom'</li>
+                        <li><strong>Spacing:</strong> 'no-padding-top', 'no-padding-bottom'</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module no-padding-bottom">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    {{ filterMacro.filter(
+                        [
+                            {
+                                id: "filterNameOne",
+                                name: "Filter 1",
+                                subCat:
+                                [
+                                    {
+                                        tag: "*",
+                                        text: "All"
+                                    },
+                                    {
+                                        tag: ".value-one",
+                                        text: "Value 1"
+                                    },
+                                    {
+                                        tag: ".value-two",
+                                        text: "Value 2"
+                                    },
+                                    {
+                                        tag: ".value-three",
+                                        text: "Value 3"
+                                    }
+                                ]
+                            }
+                        ]
+                    ) }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module cards">
+
+        <div class="container">
+
+            <div class="card-deck">
+
+                {{ cardMacro.cardSingle(
+                    "value-one",
+                    "background-primary",
+                    "Dean Morris",
+                    null,
+                    "In a changing world it's still about human to human communication",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan pretium lectus, in efficitur justo mollis eget.",
+                    "See our work",
+                    "/work",
+                    "_self",
+                    "35 mins"
+                ) }}
+
+                {{ cardMacro.cardDouble(
+                    [
+                        {
+                            tag: "value-one",
+                            color: "background-primary",
+                            author: "Dean Morris",
+                            title: "In a changing world it's still about human to human communication",
+                            btn: "See our work",
+                            url: "/work",
+                            target: "_self",
+                            time: "35 mins"
+                        },
+                        {
+                            tag: "value-two",
+                            color: "background-grey-light",
+                            author: "Dean Morris",
+                            title: "In a changing world it's still about human to human communication",
+                            btn: "See our work",
+                            url: "/work",
+                            target: "_self",
+                            time: "35 mins"
+                        }
+                    ]
+                ) }}
+
+                {{ cardMacro.cardSingle(
+                    "value-one",
+                    "background-white",
+                    "Dean Morris",
+                    "assets/dist/img/placeholder-300x300.png",
+                    "In a changing world it's still about human to human communication",
+                    null,
+                    "See our work",
+                    "/work",
+                    "_self",
+                    "35 mins"
+                ) }}
+
+                {{ cardMacro.cardSingle(
+                    "value-two",
+                    "background-white",
+                    "Dean Morris",
+                    "assets/dist/img/placeholder-300x300.png",
+                    "In a changing world it's still about human to human communication",
+                    null,
+                    "See our work",
+                    "/work",
+                    "_self",
+                    "35 mins"
+                ) }}
+
+                {{ cardMacro.cardSingle(
+                    "value-two",
+                    "background-white",
+                    "Dean Morris",
+                    "assets/dist/img/placeholder-300x300.png",
+                    "In a changing world it's still about human to human communication",
+                    null,
+                    "See our work",
+                    "/work",
+                    "_self",
+                    "35 mins"
+                ) }}
+
+                {{ cardMacro.cardSingle(
+                    "value-three",
+                    "background-white",
+                    "Dean Morris",
+                    "assets/dist/img/placeholder-300x300.png",
+                    "In a changing world it's still about human to human communication",
+                    null,
+                    "See our work",
+                    "/work",
+                    "_self",
+                    "35 mins"
+                ) }}
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module cards">
+
+        <div class="container">
+
+            <div class="card-group card-profiles">
+
+                {{ cardMacro.cardProfile(
+                    "assets/dist/img/module-card-profile-twigg.png",
+                    "Dean Morris",
+                    "The Boss"
+                ) }}
+
+                {{ cardMacro.cardProfile(
+                    "assets/dist/img/module-card-profile-twigg.png",
+                    "Dean Morris",
+                    "The Boss"
+                ) }}
+
+                {{ cardMacro.cardProfile(
+                    "assets/dist/img/module-card-profile-twigg.png",
+                    "Dean Morris",
+                    "The Boss"
+                ) }}
+
+                {{ cardMacro.cardProfile(
+                    "assets/dist/img/module-card-profile-twigg.png",
+                    "Dean Morris",
+                    "The Boss"
+                ) }}
+
+                {{ cardMacro.cardProfile(
+                    "assets/dist/img/module-card-profile-twigg.png",
+                    "Dean Morris",
+                    "The Boss"
+                ) }}
+
+                {{ cardMacro.cardProfile(
+                    "assets/dist/img/module-card-profile-twigg.png",
+                    "Dean Morris",
+                    "The Boss"
+                ) }}
+
+                {{ cardMacro.cardProfile(
+                    "assets/dist/img/module-card-profile-twigg.png",
+                    "Dean Morris",
+                    "The Boss"
+                ) }}
+
+                {{ cardMacro.cardProfile(
+                    "assets/dist/img/module-card-profile-twigg.png",
+                    "Dean Morris",
+                    "The Boss"
+                ) }}
+
+                {{ cardMacro.cardProfile(
+                    "assets/dist/img/module-card-profile-twigg.png",
+                    "Dean Morris",
+                    "The Boss"
+                ) }}
+
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

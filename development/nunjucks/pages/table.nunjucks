@@ -1,0 +1,35 @@
+{% extends '../templates/_layout.nunjucks' %}
+
+{% block bodyCssClasses %}page-index{% endblock %}
+
+{% block content %}
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h1 class="smaller">Table Component</h1>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module column">
+
+        <div class="container">
+
+            {% include '../templates/partials/_table.nunjucks' %}
+
+        </div>
+
+    </section>
+
+{% endblock %}

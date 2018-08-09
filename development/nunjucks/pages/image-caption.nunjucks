@@ -1,0 +1,92 @@
+{% extends '../templates/_layout.nunjucks' %}
+
+{% block bodyCssClasses %}page-index{% endblock %}
+
+{% block content %}
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h1 class="smaller">Image with Caption Module</h1>
+                    <p>Shared CMS options:</p>
+                    <p>To be applied to the parent 'section' tag.</p>
+                    <ul>
+                        <li><strong>Offsets:</strong>'container-offset-top', 'container-offset-bottom'</li>
+                        <li><strong>Spacing:</strong> 'no-padding-top', 'no-padding-bottom'</li>
+                    </ul>
+                    <p>To be applied to the 'img' tag.</p>
+                    <ul>
+                        <li>
+                            <strong>Images:</strong>
+                            <ul>
+                                <li>By default add the classes 'img-fluid', 'mx-auto and d-block' to the 'img' tag.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module no-padding-bottom">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Single image with caption:</h4>
+                    {# <p>Required CMS options:</p>
+                    <ul>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul> #}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include '../templates/partials/_image-caption.nunjucks' %}
+
+    <section class="module no-padding-bottom">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Double image with caption:</h4>
+                    {# <p>Required CMS options:</p>
+                    <ul>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ul> #}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include '../templates/partials/_image-caption-double.nunjucks' %}
+
+{% endblock %}

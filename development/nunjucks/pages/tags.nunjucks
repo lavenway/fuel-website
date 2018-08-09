@@ -1,0 +1,237 @@
+{% extends '../templates/_layout.nunjucks' %}
+
+{% import '../templates/macros/_tag.nunjucks' as tagMacro %}
+
+{% block bodyCssClasses %}page-index{% endblock %}
+
+{% block content %}
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h1 class="smaller">Tag Module</h1>
+                    {# <p>Shared CMS options:</p>
+                    <p>To be applied to the parent 'section' tag.</p>
+                    <ul>
+                        <li><strong>Offsets:</strong>'container-offset-top', 'container-offset-bottom'</li>
+                        <li><strong>Spacing:</strong> 'no-padding-top', 'no-padding-bottom'</li>
+                    </ul> #}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module tags background-grey-light">
+
+        <div class="marquee">
+            <span class="scroll-left">
+                {{ tagMacro.tag(
+                    [
+                        {
+                            text: "Design."
+                        },
+                        {
+                            text: "Email Marketing."
+                        },
+                        {
+                            text: "UI."
+                        },
+                        {
+                            text: "UX."
+                        },
+                        {
+                            text: "Social Media."
+                        }
+                    ]
+                ) }}
+            </span>
+        </div>
+
+        <div class="marquee marquee-clone">
+            <span class="scroll-left">
+                {{ tagMacro.tag(
+                    [
+                        {
+                            text: "Design."
+                        },
+                        {
+                            text: "Email Marketing."
+                        },
+                        {
+                            text: "UI."
+                        },
+                        {
+                            text: "UX."
+                        },
+                        {
+                            text: "Social Media."
+                        }
+                    ]
+                ) }}
+            </span>
+        </div>
+
+        <div class="marquee">
+            <span class="scroll-right">
+                {{ tagMacro.tag(
+                    [
+                        {
+                            text: "Management."
+                        },
+                        {
+                            text: "Websites."
+                        },
+                        {
+                            text: "PPC."
+                        },
+                        {
+                            text: "Analytics."
+                        },
+                        {
+                            text: "Marketing."
+                        }
+                    ]
+                ) }}
+            </span>
+        </div>
+
+        <div class="marquee marquee-clone">
+            <span class="scroll-right">
+                {{ tagMacro.tag(
+                    [
+                        {
+                            text: "Management."
+                        },
+                        {
+                            text: "Websites."
+                        },
+                        {
+                            text: "PPC."
+                        },
+                        {
+                            text: "Analytics."
+                        },
+                        {
+                            text: "Marketing."
+                        }
+                    ]
+                ) }}
+            </span>
+        </div>
+
+        {# <div class="scroll-text-wrapper">
+
+            <div class="scroll-text scroll-right">
+
+                <span>
+                    {{ tagMacro.tag(
+                        [
+                            {
+                                text: "Design."
+                            },
+                            {
+                                text: "Email Marketing."
+                            },
+                            {
+                                text: "UI."
+                            },
+                            {
+                                text: "UX."
+                            },
+                            {
+                                text: "Social Media."
+                            }
+                        ]
+                    ) }}
+                </span>
+
+            </div>
+
+            <div class="scroll-text scroll-right">
+
+                <span>
+                    {{ tagMacro.tag(
+                        [
+                            {
+                                text: "Design."
+                            },
+                            {
+                                text: "Email Marketing."
+                            },
+                            {
+                                text: "UI."
+                            },
+                            {
+                                text: "UX."
+                            },
+                            {
+                                text: "Social Media."
+                            }
+                        ]
+                    ) }}
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-text scroll-left">
+
+            <span>
+                {{ tagMacro.tag(
+                    [
+                        {
+                            text: "Management."
+                        },
+                        {
+                            text: "Websites."
+                        },
+                        {
+                            text: "PPC."
+                        },
+                        {
+                            text: "Analytics."
+                        },
+                        {
+                            text: "Marketing."
+                        }
+                    ]
+                ) }}
+            </span>
+
+            <span>
+                {{ tagMacro.tag(
+                    [
+                        {
+                            text: "Management."
+                        },
+                        {
+                            text: "Websites."
+                        },
+                        {
+                            text: "PPC."
+                        },
+                        {
+                            text: "Analytics."
+                        },
+                        {
+                            text: "Marketing."
+                        }
+                    ]
+                ) }}
+            </span>
+
+        </div> #}
+
+    </section>
+
+{% endblock %}

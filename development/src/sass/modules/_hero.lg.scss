@@ -1,0 +1,59 @@
+/*************************************************
+ * HERO - LARGE
+ *************************************************/
+
+.hero {
+    padding: $gutter * 6 0;
+
+    h1, h2, h3, h4, h5, h6, p {
+        max-width: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-left: -16.66666%;
+        margin-right: -16.66666%;
+    }
+
+    p {
+        font-size: $font-size-8;
+        line-height: 48px;
+    }
+
+    .btn {
+        margin-top: $gutter * 2;
+    }
+
+    .video-container {
+        iframe {
+            width: 100% !important;
+        }
+    }
+
+    &.carousel {
+        height: 800px;
+
+        .swiper-container {
+            .swiper-slide {
+                padding: 0;
+            }
+
+            .swiper-pagination {
+                .swiper-pagination-bullet {
+                    width: auto;
+                    height: auto;
+                    margin-left: 0;
+                    margin-right: 0;
+                    border-radius: 0;
+                    font-size: $font-size-4;
+                    color: $color-white;
+                    text-align: left;
+                    background: transparent;
+
+                    &.swiper-pagination-bullet-active {
+                        font-size: $font-size-5;
+                    }
+                }
+            }
+        }
+    }
+}

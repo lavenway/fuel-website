@@ -1,0 +1,138 @@
+{% extends '../templates/_layout.nunjucks' %}
+
+{% import '../templates/macros/_card.nunjucks' as cardMacro %}
+
+{% block bodyCssClasses %}page-index{% endblock %}
+
+{% block content %}
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h1 class="smaller">Card Component</h1>
+                    <p>Required CMS options:</p>
+                    <p>To be applied to the parent 'card' tag.</p>
+                    <ul>
+                        <li><strong>Colours:</strong> 'background-primary', 'background-secondary', 'background-white', 'background-grey-light'</li>
+                    </ul>
+                    <p>Some elements will need to be conditional:</p>
+                    <ul>
+                        <li>'Author', 'image', description', 'posted'</li>
+                    </ul>
+                    <p>Single cards will need tags applied to the 'card' block.</p>
+                    <p>Double cards will need tags applied to the 'nested-card' block.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Card - Single - All Elements:</h4>
+                    <p>&nbsp;</p>
+
+                    {{ cardMacro.cardSingle(
+                        "value-two",
+                        "background-primary",
+                        "Dean Morris",
+                        "assets/dist/img/placeholder-300x300.png",
+                        "In a changing world it's still about human to human communication",
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan pretium lectus, in efficitur justo mollis eget.",
+                        "See our work",
+                        "/work",
+                        "_self",
+                        "35 mins"
+                    ) }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Card - Nested:</h4>
+                    <p>&nbsp;</p>
+
+                    {{ cardMacro.cardDouble(
+                        [
+                            {
+                                tag: "value-one",
+                                color: "background-primary",
+                                author: "Dean Morris",
+                                title: "In a changing world it's still about human to human communication",
+                                btn: "See our work",
+                                url: "/work",
+                                target: "_self",
+                                time: "35 mins"
+                            },
+                            {
+                                tag: "value-three",
+                                color: "background-grey-light",
+                                author: "Dean Morris",
+                                title: "In a changing world it's still about human to human communication",
+                                btn: "See our work",
+                                url: "/work",
+                                target: "_self",
+                                time: "35 mins"
+                            }
+                        ]
+                    ) }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Card - Profile</h4>
+                    <p>&nbsp;</p>
+
+                    {{ cardMacro.cardProfile(
+                        "assets/dist/img/placeholder-300x300.png",
+                        "Dean Morris",
+                        "The Boss"
+                    ) }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

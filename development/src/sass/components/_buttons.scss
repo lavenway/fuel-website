@@ -3,8 +3,23 @@
  *************************************************/
 
 .btn {
-    &.btn-black {
-        display: block;
-        @include btn( $color-black, $color-white, $color-white, $color-black );
+    .background-black & {
+        @include btn( transparent, $color-white, $color-white, $color-white, $color-black, $color-white );
+    }
+
+    .background-white & {
+        @include btn( transparent, $color-primary, $color-secondary, $color-secondary, $color-white, $color-secondary );
+    }
+
+    .background-primary & {
+        @include btn( transparent, $color-white, $color-secondary, $color-secondary, $color-white, $color-secondary );
+    }
+
+    .background-secondary & {
+        @include btn( transparent, $color-white, $color-primary, $color-primary, $color-white, $color-primary );
+    }
+
+    .background-grey-light & {
+        @include btn( transparent, $color-primary, $color-secondary, $color-secondary, $color-white, $color-secondary );
     }
 }

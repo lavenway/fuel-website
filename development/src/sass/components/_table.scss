@@ -1,0 +1,24 @@
+/*************************************************
+ * TABLE
+ *************************************************/
+
+.table {
+    border-collapse:separate;
+    border-spacing: $gutter;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+        line-height: normal;
+    }
+
+    tr {
+        td {
+            vertical-align: middle;
+            text-align: center;
+
+            &.table-grey-light {
+                background: $color-grey-light;;
+            }
+        }
+    }
+}

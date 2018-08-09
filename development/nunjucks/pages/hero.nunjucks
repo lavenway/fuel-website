@@ -1,0 +1,127 @@
+{% extends '../templates/_layout.nunjucks' %}
+
+{% block bodyCssClasses %}page-index{% endblock %}
+
+{% block content %}
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h1 class="smaller">Hero Module</h1>
+                    <p></p>
+                    <p>Shared CMS options:</p>
+                    <p>To be applied to the parent 'section' tag.</p>
+                    <ul>
+                        <li><strong>Offsets:</strong>'container-offset-top', 'container-offset-bottom'</li>
+                        <li><strong>Spacing:</strong> 'no-padding-top', 'no-padding-bottom'</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module no-padding-bottom">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Hero standard:</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include '../templates/partials/_hero.nunjucks' %}
+
+    <section class="module no-padding-bottom">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Hero with image:</h4>
+                    <ul>
+                        <li>By default the class 'scale' should be applied to the img tag for parallax effect.</li>
+                        <li>By default the class 'rellax' should be applied to the 'image-container' tag.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include '../templates/partials/_hero-image.nunjucks' %}
+
+    <section class="module no-padding-bottom">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Hero with video:</h4>
+                    <ul>
+                        <li>By default the class 'rellax' should be applied to the 'video-container' tag.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include '../templates/partials/_hero-video.nunjucks' %}
+
+    <section class="module no-padding-bottom">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h4>Hero with carousel:</h4>
+                    <ul>
+                        <li>By default the class 'scale' should be applied to the img tag for parallax effect.</li>
+                        <li>By default the class 'rellax' should be applied to the 'image-container' tag.</li>
+                    </ul>
+                    <p>CMS options:</p>
+                    <ul>
+                        <li>A text value will need to be applied to the 'swiper-slide' tag data attribute for the navigation.</li>
+                        <li>A slide can either have an 'image' or 'video' so the HTML will need to be configured accordingly.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include '../templates/partials/_hero-carousel.nunjucks' %}
+
+{% endblock %}

@@ -1,0 +1,142 @@
+<section id="page-work" class="module column background-grey-light">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col">
+
+                <div class="float-right">
+                    <ul id="work-nav" class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="menu" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-lg-7 offset-lg-1">
+
+                <h1>Future PLC</h1>
+
+                <div class="row">
+
+                    <div class="col offset-1">
+
+                        <p class="intro"><i>Fuel Integrated supports Dell with unique event for EMEA Dell EMC channel partners.</i></p>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col">
+
+                        <div class="d-lg-none d-xl-none">
+
+                            <div class="details">
+                                <h4>
+                                    <span>Client.</span>
+                                    <span>Type of work.</span>
+                                    <span>date.</span>
+                                </h4>
+                            </div>
+
+                            {{ buttonMacro.button(
+                                "/contact",
+                                "_self",
+                                "Download our technology whitepaper"
+                            ) }}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col offset-lg-1">
+
+                        <div class="media-holder">
+                            <!-- POSSIBLY ANIMATED GIF / VIDEO HERE -->
+                            <img class="mx-auto d-block img-fluid" src="assets/dist/img/module-image-full-width.jpg" alt="Image description">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col offset-lg-1">
+
+                        <h4>Our approach.</h4>
+                        <p>Moreover the striking, brilliant and vivid colors are the reason why we are attracted to the posters that we see.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-lg-3 offset-lg-1">
+
+                <aside class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
+
+                    <div class="details">
+                        <h4>
+                            <span>Client.</span>
+                            <span>Type of work.</span>
+                            <span>date.</span>
+                        </h4>
+                    </div>
+
+                    {{ buttonMacro.button(
+                        "/contact",
+                        "_self",
+                        "Download our technology whitepaper"
+                    ) }}
+
+                    <h6>Tags</h6>
+
+                    <div class="tags">
+                        <a href="#"><span>Strategy</span></a>
+                        <a href="#"><span>Success Stories</span></a>
+                        <a href="#"><span>Case Studies</span></a>
+                        <a href="#"><span>Transformation</span></a>
+                        <a href="#"><span>Events</span></a>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

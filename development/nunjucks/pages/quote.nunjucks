@@ -1,0 +1,47 @@
+{% extends '../templates/_layout.nunjucks' %}
+
+{% block bodyCssClasses %}page-index{% endblock %}
+
+{% block content %}
+
+    <section class="module">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h1 class="smaller">Quote Component</h1>
+                    <p>To be applied to the 'blockquote' tag.</p>
+                    <ul>
+                        <li><strong>Colours:</strong> 'background-primary', 'background-secondary', 'background-grey-light', 'background-grey', 'background-grey-dark'</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="module column">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    {% include '../templates/partials/_quote.nunjucks' %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

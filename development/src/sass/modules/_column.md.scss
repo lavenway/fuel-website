@@ -1,0 +1,33 @@
+/*************************************************
+ * COLUMN - MEDIUM
+ *************************************************/
+
+.column {
+    p {
+        i {
+            font-size: $font-size-5;
+            line-height: 33px;
+        }
+    }
+
+    img {
+        margin-bottom: 0;
+    }
+
+    &#page-article {
+        .image {
+            right: 80px;
+            margin-top: -220px;
+        }
+    }
+
+    &#page-work {
+        h1 {
+            font-size: $font-size-11 + 12;
+        }
+
+        .btn {
+            margin: $gutter * 2 0 $gutter * 2 + 10;
+        }
+    }
+}

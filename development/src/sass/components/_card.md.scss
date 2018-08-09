@@ -1,0 +1,29 @@
+/*************************************************
+ * CARD - MEDIUM
+ *************************************************/
+
+.card {
+    &.profile {
+        padding-left: $gutter * 2;
+        padding-right: $gutter * 2;
+
+        &:nth-child(1n+1) {
+            &:before {
+                display: none;
+            }
+        }
+
+        &:nth-child(2n+1) {
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 128px;
+                margin-top: 152px;
+                background: $color-grey-light;
+            }
+        }
+    }
+}

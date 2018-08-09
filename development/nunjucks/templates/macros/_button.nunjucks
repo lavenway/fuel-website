@@ -1,0 +1,3 @@
+{% macro button( url, target, label ) %}
+    <a class="btn" href="{{ url }}" target="{{ target }}" role="button">{{ label }}</a>
+{% endmacro %}

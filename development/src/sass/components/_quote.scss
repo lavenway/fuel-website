@@ -1,0 +1,37 @@
+/*************************************************
+ * QUOTE
+ *************************************************/
+
+blockquote {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+
+    &.quote {
+        padding: $gutter * 2 $gutter;
+
+        &.background-primary,
+        &.background-secondary {
+            p {
+                color: $color-white;
+            }
+        }
+
+        &.background-grey-light,
+        &.background-grey,
+        &.background-grey-dark {
+            p {
+                color: $color-black;
+            }
+        }
+
+        p {
+            i {
+                font-size: $font-size-4;
+            }
+
+            &:only-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

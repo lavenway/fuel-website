@@ -3,5 +3,52 @@
  *************************************************/
 
 footer {
+    padding: 75px;
+    color: $color-white;
+    text-align: center;
 
+    .cta-link {
+        .btn {
+            margin-top: 0;
+        }
+    }
+
+    .logo {
+        margin-top: $gutter * 2;
+        margin-bottom: $gutter * 2;
+    }
+
+    #social-icons {
+        a {
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+            width: 36px;
+            height: 36px;
+            margin-left: 20px;
+            color: inherit;
+            text-align: center;
+            border: 3px solid $color-white;
+            border-radius: 50%;
+
+            &:first-child {
+                width: auto;
+                height: auto;
+                margin-top: -2px;
+                margin-left: 0;
+                border-radius: 0;
+                border: none;
+
+                i {
+                    font-size: $font-size-8;
+                    line-height: normal;
+                }
+            }
+
+            i {
+                font-size: $font-size-4 + 2;
+                line-height: 30px;
+            }
+        }
+    }
 }

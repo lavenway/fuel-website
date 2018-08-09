@@ -1,0 +1,75 @@
+<section class="module form background-grey-light">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col col-md-4 offset-md-8">
+
+                <div class="float-right">
+
+                    <p><i>Describe your project and leave us your contact info, we’ll get back to you within 24 hours.</i></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <img class="mx-auto d-block img-fluid" src="assets/dist/img/placeholder-300x300.png" alt="Fuel">
+
+            </div>
+
+            <div class="col-md-7 offset-md-1">
+
+                <form>
+                    <div class="form-group row">
+                        <label for="inputName" class="col-md-3 col-form-label">Your name.</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputCompany" class="col-md-3 col-form-label">Your company.</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="inputCompany" placeholder="Company name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-md-3 col-form-label">Your email address.</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="E-mail">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputTelephone" class="col-md-3 col-form-label">Your contact number.</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="inputTelephone" placeholder="Telephone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="textareaDetails" class="col-form-label">Describe what you want, the more we know the better.</label>
+                        <textarea class="form-control" id="textareaDetails" rows="3"></textarea>
+                    </div>
+
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
